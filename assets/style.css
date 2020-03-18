@@ -1,0 +1,29 @@
+.navbar-brand {
+    font-size: 36px;
+}
+
+.search-header {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.city-name {
+    font-size: 30px;
+}
+
+.forecast-date {
+    font-size: 18px;
+}
+
+.cardForcast {
+    background-color: rgba(0, 0, 139, 0.507);
+    color: white;
+}
+
+.list-group-item{
+background-color: rgba(0, 0, 139, 0.507) ;
+}
+
+h1{
+    background-color: darkgray;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <div class="header"> <h1> Weather Dashboard </h1></div>
+    <div class="row">
+        <div class="col-3">
+            <form>
+                <button class="btn" id="search">Search for a City:</button>
+                
+                <input type="text" id="city" >
+               
+            </form>
+
+            <ul id="cityhistory">
+
+            </ul>
+        </div>
+        <div class="col-9">
+            <div id="current"></div>
+            <div class="row" id="forecast"></div>
+        </div>
+
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
