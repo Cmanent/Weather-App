@@ -38,7 +38,7 @@ function renderList() {
 
 function searchWeather(city) {
 
-  var apiQuery = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIkey}&units="imperial"`
+  var apiQuery = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIkey}&units="imperial"`
   console.log(apiQuery)
   $.get(apiQuery).then(function (result) {
 
@@ -48,7 +48,7 @@ function searchWeather(city) {
  
 
     // show the info on the HTML
-    var icon = "http://openweathermap.org/img/w/" + result.weather[0].icon + ".png"
+    var icon = "https://openweathermap.org/img/w/" + result.weather[0].icon + ".png"
     var card = `
 <div class="card cardForcast mb-5" style="width: 14rem; height: 20rem">
   <img src=${icon} class="card-img-top" alt="..." </img>
@@ -87,7 +87,7 @@ function saveLocalStorage(city) {
 }
 function searchForecast(city) {
 
-  var apiQuery = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIkey}&units="imperial"`
+  var apiQuery = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIkey}&units="imperial"`
   console.log(apiQuery)
   $.get(apiQuery).then(function (result) {
 
@@ -98,7 +98,7 @@ function searchForecast(city) {
       var day = result.list[i].dt_txt.split(" ")[0]
       var hour = result.list[i].dt_txt.split(" ")[1]
       if (hour === "12:00:00") {
-        var icon = "http://openweathermap.org/img/w/" + result.list[i].weather[0].icon + ".png"
+        var icon = "https://openweathermap.org/img/w/" + result.list[i].weather[0].icon + ".png"
         console.log(icon)
         var card = `
 
@@ -128,7 +128,7 @@ function searchForecast(city) {
 function calculateuv(lon, lat) {
   $.ajax({
     type: "GET",
-    url: "http://api.openweathermap.org/data/2.5/uvi?appid=" + APIkey + "&lat=" + lat + "&lon=" + lon,
+    url: "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIkey + "&lat=" + lat + "&lon=" + lon,
 
 
   }).then(function (resUV) {
